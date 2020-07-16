@@ -1,6 +1,7 @@
 # R introduction to Twitter scraping
 # Social Computing - The Univeristy of Melbourne
 # Created August 2018 - Niels van Berkel
+# Edited in July 2020 - Senuri Wijenayake
 
 # Install required packages for scraping Twitter data
 install.packages("twitteR")
@@ -99,12 +100,7 @@ install.packages("ggmap")
 library("ggmap")
 
 # Create a map of Melbourne city
-map <- qmap('Melbourne', zoom=15)
-
-# Add a layer of points which shows the tweet locations
-map <- map + geom_point(data = melb_tweets, aes(x=longitude, y=latitude), size = 2, color = 'red')
-
-# Print the map
+map <- qmplot(longitude, latitude, data = melb_tweets, maptype = "toner-lite", color = I("red"))
 map
 
 

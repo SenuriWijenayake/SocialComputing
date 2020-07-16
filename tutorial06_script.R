@@ -1,6 +1,7 @@
 # R introduction to Twitter scraping
 # Social Computing - The Univeristy of Melbourne
 # Created August 2018 - Niels van Berkel
+# Edited in July 2020 - Senuri Wijenayake
 
 # Install required packages for scraping Twitter data
 # install.packages("twitteR")
@@ -92,6 +93,8 @@ tweets_cleaned %>%
        y = "Unique words",
        title = "Count of unique words found in tweets")
 
+install.packages("textdata")
+library(textdata)
 # Load dictionary with -5 to 5 sentiment score assigned to each word
 afinn <- get_sentiments("afinn")
 # Load dictionary with positive / negative sentiment words
